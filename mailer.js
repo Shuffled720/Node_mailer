@@ -12,8 +12,8 @@ async function main() {
         port: 587,
         secure: false, // true for 465, false for other ports
         auth: {
-            user: 'shuffled720@gmail.com', // generated ethereal user
-            pass: 'avhozspumkpdxvpn', // generated ethereal password
+            user: 'shuffled720@gmail.com', // host email address
+            pass: 'avhozspumkpdxvpn', // host app password(use app password, if don't have , got to google accout> enable two step verification>  go to app password and generate password)
 
 
         },
@@ -21,14 +21,15 @@ async function main() {
 
     // send mail with defined transport object
     let info = await transporter.sendMail({
-        from: '"Vishal Sexy" <shuffled720@gmail.com>', // sender address
-        to: "cse210001076@iiti.ac.in", // list of receivers
+        from: '"Vishal OP" <shuffled720@gmail.com>', // sender address
+        to: "cse210001076@iiti.ac.in", // list of receivers email Id's
         subject: "Hello ✔", // Subject line
         text: "Hello world?", // plain text body
         html: "<b><h1>Hello world?</h1></b><p>vsbhdfsdbfhsdbfs</p>", // html body
     });
 
-    // console.log("Message sent: %s", info.messageId);
+    console.log("Message sent: %s", info.messageId);
+    //logs for email sent successfully
     // // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
 
     // // Preview only available when sending through an Ethereal account
